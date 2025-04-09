@@ -1,0 +1,24 @@
+/feed/*
+Content-Type: application/rss+xml; charset=UTF-8
+
+/wp-content/uploads/*
+  Cache-Control: public, max-age=31536000
+
+https://wpkind.pages.dev/*
+  X-Robots-Tag: noindex
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+
+https://wpkind-8mt.pages.dev/*
+  X-Robots-Tag: noindex
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+
+https://wpkind.com/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+
+https://www.wpkind.com/*
+  X-Robots-Tag: noindex
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
