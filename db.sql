@@ -16,65 +16,6 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `wp_apcm_details`
---
-
-DROP TABLE IF EXISTS `wp_apcm_details`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `wp_apcm_details` (
-  `timestamp` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `id` varchar(100) COLLATE utf8mb3_unicode_ci NOT NULL DEFAULT '-',
-  `items` int unsigned NOT NULL DEFAULT '0',
-  `size` int unsigned NOT NULL DEFAULT '0',
-  UNIQUE KEY `u_stat` (`timestamp`,`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `wp_apcm_details`
---
-
-LOCK TABLES `wp_apcm_details` WRITE;
-/*!40000 ALTER TABLE `wp_apcm_details` DISABLE KEYS */;
-/*!40000 ALTER TABLE `wp_apcm_details` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `wp_apcm_statistics`
---
-
-DROP TABLE IF EXISTS `wp_apcm_statistics`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `wp_apcm_statistics` (
-  `timestamp` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `delta` int unsigned NOT NULL DEFAULT '0',
-  `status` enum('disabled','enabled','recycle_in_progress') COLLATE utf8mb3_unicode_ci NOT NULL DEFAULT 'disabled',
-  `mem_total` int unsigned NOT NULL DEFAULT '0',
-  `mem_used` int unsigned NOT NULL DEFAULT '0',
-  `slot_total` int unsigned NOT NULL DEFAULT '0',
-  `slot_used` int unsigned NOT NULL DEFAULT '0',
-  `frag_small` int unsigned NOT NULL DEFAULT '0',
-  `frag_big` int unsigned NOT NULL DEFAULT '0',
-  `frag_count` int unsigned NOT NULL DEFAULT '0',
-  `hit` int unsigned NOT NULL DEFAULT '0',
-  `miss` int unsigned NOT NULL DEFAULT '0',
-  `ins` int unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`timestamp`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `wp_apcm_statistics`
---
-
-LOCK TABLES `wp_apcm_statistics` WRITE;
-/*!40000 ALTER TABLE `wp_apcm_statistics` DISABLE KEYS */;
-/*!40000 ALTER TABLE `wp_apcm_statistics` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `wp_commentmeta`
 --
 
@@ -467,4 +408,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-04-09 12:57:08
+-- Dump completed on 2025-04-09 12:58:57
