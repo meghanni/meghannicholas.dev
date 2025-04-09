@@ -1,6 +1,6 @@
 <article @php(post_class('h-entry'))>
     <header>
-        <h1 class="p-name text-primary-200">
+        <h1 class="p-name">
             {!! $title !!}
         </h1>
 
