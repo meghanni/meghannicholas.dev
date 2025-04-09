@@ -1,13 +1,13 @@
-<article @php(post_class('h-entry'))>
+<article id="content-single" @php(post_class('h-entry'))>
     <header>
-        <h1 class="p-name">
+        <h1>
             {!! $title !!}
         </h1>
 
         @include('partials.entry-meta')
     </header>
 
-    <div class="e-content">
+    <div class="prose">
         @php(the_content())
     </div>
 
