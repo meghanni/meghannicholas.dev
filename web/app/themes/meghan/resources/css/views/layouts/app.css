@@ -1,4 +1,5 @@
 #main {
-
     padding: var(--sectionPadding);
+    max-width: var(--maxW);
+    margin: 0 auto;
 }
